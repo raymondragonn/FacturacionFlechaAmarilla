@@ -1,0 +1,236 @@
+<pagetitle [title]="'Users'" />
+
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col">
+            <h4 class="card-title">Users Details</h4>
+          </div>
+          <!--end col-->
+          <div class="col-auto">
+            <button
+              (click)="open(userModal)"
+              class="btn bg-primary text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#addUser"
+            >
+              <i class="fas fa-plus me-1"></i> Add User
+            </button>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end card-header-->
+      <div class="card-body pt-0">
+        <div class="d-flex justify-content-between pb-1 px-1">
+          <label>
+            <select
+              (change)="onRowsChange($event)"
+              class="datatable-selector p-1"
+              name="per-page"
+            >
+              <option [value]="5">5</option>
+              <option [value]="10" selected="">10</option>
+              <option [value]="15">15</option>
+              <option [value]="20">20</option>
+              <option [value]="25">25</option>
+            </select>
+            entries per page
+          </label>
+          <input
+            class="datatable-input p-1"
+            (input)="searchName($event)"
+            placeholder="Search..."
+            type="text"
+            name="search"
+            title="Search within table"
+            aria-controls="datatable_1"
+          />
+        </div>
+        <div class="table-responsive">
+          <table class="table mb-0" id="datatable_1">
+            <thead class="table-light">
+              <tr>
+                <th sortable="name" (sort)="onSort($event)">Name</th>
+                <th sortable="email" (sort)="onSort($event)">Email</th>
+                <th sortable="phone" (sort)="onSort($event)">Mobile No</th>
+                <th sortable="" (sort)="onSort($event)">Registered On</th>
+                <th sortable="status" (sort)="onSort($event)">Status</th>
+                <th class="text-end">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of usersData; track $index) {
+                <tr>
+                  <td class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <img
+                        [src]="item.avatar"
+                        class="me-2 thumb-md align-self-center rounded"
+                        alt="..."
+                      />
+                      <div class="flex-grow-1 text-truncate">
+                        <h6 class="m-0">{{ item.name }}</h6>
+                        <p class="fs-12 text-muted mb-0">{{ item.country }}</p>
+                      </div>
+                      <!--end media body-->
+                    </div>
+                  </td>
+                  <td>
+                    <a
+                      href="javascript:void(0);"
+                      class="text-body text-decoration-underline"
+                      >{{ item.email }}</a
+                    >
+                  </td>
+                  <td>{{ item.phone }}</td>
+                  <td>{{ item.date }}</td>
+                  <td>
+                    <span
+                      class="badge rounded"
+                      [ngClass]="
+                        item.status == 'Active'
+                          ? 'text-success bg-success-subtle'
+                          : 'text-secondary bg-secondary-subtle'
+                      "
+                      >{{ item.status }}</span
+                    >
+                  </td>
+                  <td class="text-end">
+                    <a href="javascript:void(0);"
+                      ><i class="las la-pen text-secondary fs-18"></i
+                    ></a>
+                    <a href="javascript:void(0);"
+                      ><i class="las la-trash-alt text-secondary fs-18"></i
+                    ></a>
+                  </td>
+                </tr>
+              } @empty {
+                <tr>
+                  <td colspan="4" style="text-align: center">
+                    No results match your search query
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+          @if (totalEntries > 0) {
+            <div class="d-flex justify-content-between mt-3 align-items-center">
+              <div class="datatable-info">
+                Showing {{ filteredEntries }} of {{ totalEntries }} entries
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end col -->
+</div>
+
+<ng-template
+  #userModal
+  let-modal
+  class="modal fade"
+  id="addUser"
+  tabindex="-1"
+  aria-labelledby="addUserLabel"
+  aria-hidden="true"
+>
+  <div class="modal-header">
+    <h5 class="modal-title" id="addUserLabel">Add User Detail</h5>
+    <button
+      type="button"
+      class="btn-close"
+      (click)="modal.close()"
+      data-bs-dismiss="modal"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group mb-2">
+      <div class="d-flex align-items-center">
+        <i
+          class="fas fa-user text-muted thumb-xl rounded me-2 border-dashed"
+        ></i>
+        <div class="flex-grow-1 text-truncate">
+          <label class="btn btn-primary text-light">
+            Add Avatar <input type="file" hidden="" />
+          </label>
+        </div>
+        <!--end media body-->
+      </div>
+    </div>
+    <div class="mb-2">
+      <label for="fullName">Full Name</label>
+      <div class="input-group">
+        <span class="input-group-text" id="fullName"
+          ><i class="far fa-user"></i
+        ></span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Name"
+          aria-label="FullName"
+        />
+      </div>
+    </div>
+    <div class="mb-2">
+      <label for="email">Email</label>
+      <div class="input-group">
+        <span class="input-group-text" id="email"
+          ><i class="far fa-envelope"></i
+        ></span>
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Email address"
+          aria-label="email"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-2">
+          <label for="ragisterDate">Register Date</label>
+          <div class="input-group">
+            <span class="input-group-text" id="ragisterDate"
+              ><i class="far fa-calendar"></i
+            ></span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="00/2024"
+              aria-label="ragisterDate"
+            />
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+      <div class="col-md-6">
+        <div class="mb-2">
+          <label for="mobilleNo">Mobille No</label>
+          <div class="input-group">
+            <span class="input-group-text" id="mobilleNo"
+              ><i class="fas fa-phone"></i
+            ></span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="+1 234 567 890"
+              aria-label="mobilleNo"
+            />
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary w-100">Add User</button>
+  </div>
+</ng-template>

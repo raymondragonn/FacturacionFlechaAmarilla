@@ -1,0 +1,327 @@
+<pagetitle [title]="'Payments'" />
+<div class="row">
+  <div class="col-md-4">
+    <div class="card bg-globe-img">
+      <div class="card-body">
+        <div>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fs-16 fw-semibold">Balance</span>
+            <form class="">
+              <div
+                class="dynamic-select"
+                [ngStyle]="{ width: width, height: height }"
+              >
+                <input
+                  type="hidden"
+                  name="dynamic-select"
+                  [value]="selectedValue"
+                />
+                <div
+                  class="dynamic-select-header"
+                  (click)="toggleOptions()"
+                  [ngClass]="{ 'dynamic-select-header-active': optionsVisible }"
+                >
+                  <img
+                    *ngIf="selectedValue?.img"
+                    [src]="selectedValue.img"
+                    [alt]="selectedValue.text"
+                  />
+                  {{ placeholder }}
+                </div>
+                <div class="dynamic-select-options" *ngIf="optionsVisible">
+                  <div
+                    *ngFor="let option of data"
+                    class="dynamic-select-option"
+                    (click)="selectOption(option)"
+                  >
+                    <img
+                      *ngIf="option.img"
+                      [src]="option.img"
+                      [alt]="option.text"
+                    />
+                    <span
+                      class="text-truncate"
+                      [ngStyle]="getImageStyle(option)"
+                      >{{ option.text }}</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <h4 class="my-2 fs-24 fw-semibold">
+            122.5692.00 <small class="font-14">BTC</small>
+          </h4>
+          <p class="mb-3 text-muted fw-semibold">
+            <span class="text-success"
+              ><i class="fas fa-arrow-up me-1"></i>11.1%</span
+            >
+            Outstanding balance boost
+          </p>
+          <button type="submit" class="btn btn-soft-primary me-1">
+            Transfer
+          </button>
+          <button type="button" class="btn btn-soft-danger">Request</button>
+        </div>
+        <div class="row mt-3">
+          <div class="col-4">
+            <div class="p-2 border-dashed border-theme-color rounded">
+              <h5 class="mt-1 mb-0 fw-medium">$82365.00</h5>
+              <small class="text-muted">BTC/USD</small>
+            </div>
+          </div>
+          <!--end col-->
+          <div class="col-4">
+            <div class="p-2 border-dashed border-theme-color rounded">
+              <h5 class="mt-1 mb-0 fw-medium">$15482.00</h5>
+              <small class="text-muted">EUR/USD</small>
+            </div>
+          </div>
+          <!--end col-->
+          <div class="col-4">
+            <div class="p-2 border-dashed border-theme-color rounded">
+              <h5 class="mt-1 mb-0 fw-medium">$95628.00</h5>
+              <small class="text-muted">GBP/USD</small>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+        <p class="mb-0 mt-2 text-success fst-italic">
+          The last transaction $2560.00 is Successful!
+        </p>
+      </div>
+      <!--end card-body-->
+    </div>
+    <!--end card-->
+  </div>
+  <!--end col-->
+  <div class="col-md-6 col-lg-4">
+    <div class="card bg-corner-img">
+      <div class="card-body">
+        <div class="row d-flex justify-content-center">
+          <div class="col-9">
+            <p class="text-muted text-uppercase mb-0 fw-normal fs-13">
+              Gross Volume
+            </p>
+            <h4 class="mt-1 mb-0 fw-medium">$8659.50</h4>
+          </div>
+          <!--end col-->
+          <div class="col-3 align-self-center">
+            <div
+              class="d-flex justify-content-center align-items-center thumb-md border-dashed border-danger rounded mx-auto"
+            >
+              <i
+                class="iconoir-send-dollars fs-22 align-self-center mb-0 text-danger"
+              ></i>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end card-body-->
+    </div>
+    <!--end card-->
+    <div class="card bg-corner-img">
+      <div class="card-body">
+        <div class="row d-flex justify-content-center">
+          <div class="col-9">
+            <p class="text-muted text-uppercase mb-0 fw-normal fs-13">
+              Net Volume
+            </p>
+            <h4 class="mt-1 mb-0 fw-medium">$5523.50</h4>
+          </div>
+          <!--end col-->
+          <div class="col-3 align-self-center">
+            <div
+              class="d-flex justify-content-center align-items-center thumb-md border-dashed border-danger rounded mx-auto"
+            >
+              <i
+                class="iconoir-dollar-circle fs-22 align-self-center mb-0 text-danger"
+              ></i>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end card-body-->
+    </div>
+    <!--end card-->
+    <div class="card bg-corner-img">
+      <div class="card-body">
+        <div class="row d-flex justify-content-center">
+          <div class="col-9">
+            <p class="text-muted text-uppercase mb-0 fw-normal fs-13">
+              Per Customer
+            </p>
+            <h4 class="mt-1 mb-0 fw-medium">$450.50</h4>
+          </div>
+          <!--end col-->
+          <div class="col-3 align-self-center">
+            <div
+              class="d-flex justify-content-center align-items-center thumb-md border-dashed border-danger rounded mx-auto"
+            >
+              <i
+                class="iconoir-user fs-22 align-self-center mb-0 text-danger"
+              ></i>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end card-body-->
+    </div>
+    <!--end card-->
+  </div>
+  <!--end col-->
+  <div class="col-md-6 col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col">
+            <h4 class="card-title">Balance Details</h4>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <div class="card-body pt-0">
+        <div id="customers" class="apex-charts">
+          <apx-chart
+            [chart]="paymentCustomer.chart!"
+            [series]="paymentCustomer.series!"
+            [plotOptions]="paymentCustomer.plotOptions!"
+            [labels]="paymentCustomer.labels!"
+            [colors]="paymentCustomer.colors!"
+            [stroke]="paymentCustomer.stroke!"
+            [legend]="paymentCustomer.legend!"
+            [dataLabels]="paymentCustomer.dataLabels!"
+          />
+        </div>
+      </div>
+      <!--end card-body-->
+    </div>
+    <!--end card-->
+  </div>
+  <!--end col-->
+</div>
+<!--end row-->
+
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col">
+            <h4 class="card-title">Payments History</h4>
+          </div>
+          <!--end col-->
+          <div class="col-auto">
+            <div class="dropdown" ngbDropdown>
+              <a
+                href="javascript:void(0);"
+                ngbDropdownToggle
+                class="btn bt btn-light dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="icofont-calendar fs-5 me-1"></i> This Month<i
+                  class="las la-angle-down ms-1"
+                ></i>
+              </a>
+              <div ngbDropdownMenu class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="javascript:void(0);">Today</a>
+                <a class="dropdown-item" href="javascript:void(0);"
+                  >Last Week</a
+                >
+                <a class="dropdown-item" href="javascript:void(0);"
+                  >Last Month</a
+                >
+                <a class="dropdown-item" href="javascript:void(0);"
+                  >This Year</a
+                >
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end card-header-->
+      <div class="card-body pt-0">
+        <div class="table-responsive">
+          <table class="table mb-0">
+            <thead class="table-light">
+              <tr>
+                <th class="border-top-0">Members</th>
+                <th class="border-top-0">Invoice</th>
+                <th class="border-top-0">Payment Details</th>
+                <th class="border-top-0">Date</th>
+                <th class="border-top-0">AApprox</th>
+                <th class="border-top-0">Status</th>
+                <th class="border-top-0">Action</th>
+              </tr>
+              <!--end tr-->
+            </thead>
+            <tbody>
+              @for (item of paymentData; track $index) {
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img
+                        [src]="item.avatar"
+                        height="40"
+                        class="me-2 align-self-center rounded"
+                        alt="..."
+                      />
+                      <div class="flex-grow-1 text-truncate align-self-center">
+                        <h6 class="m-0">{{ item.name }}</h6>
+                        <p class="fs-12 text-muted mb-0">{{ item.country }}</p>
+                      </div>
+                      <!--end media body-->
+                    </div>
+                  </td>
+                  <td>
+                    <a href="apps-invoice.html" class="fs-12 text-primary">{{
+                      item.invoice
+                    }}</a>
+                  </td>
+                  <td>{{ item.service }}</td>
+                  <td>{{ item.date }}</td>
+                  <td>{{ item.time }}</td>
+                  <td>
+                    <span
+                      class="badge {{ item.status.class }} fs-11 fw-medium px-2"
+                      >{{ item.status.label }}</span
+                    >
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);"
+                      ><i class="las la-print text-secondary fs-18"></i
+                    ></a>
+                    <a href="javascript:void(0);"
+                      ><i class="las la-download text-secondary fs-18"></i
+                    ></a>
+                    <a href="javascript:void(0);"
+                      ><i class="las la-trash-alt text-secondary fs-18"></i
+                    ></a>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+          <!--end table-->
+        </div>
+        <!--end /div-->
+      </div>
+      <!--end card-body-->
+    </div>
+    <!--end card-->
+  </div>
+  <!--end col-->
+</div>

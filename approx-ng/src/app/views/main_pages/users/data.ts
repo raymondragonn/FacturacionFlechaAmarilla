@@ -1,0 +1,128 @@
+export interface UserDataType {
+  name: string
+  country: string
+  email: string
+  phone: string
+  date: string
+  avatar: string
+  status: string
+}
+export const usersData: UserDataType[] = [
+  {
+    name: 'Unity Pugh',
+    country: 'USA',
+    email: 'dummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '22 August 2024',
+    status: 'Active',
+    avatar: 'assets/images/users/avatar-1.jpg',
+  },
+  {
+    name: 'Scott Holland',
+    country: 'USA',
+    email: 'extradummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '20 August 2024',
+    status: 'Active',
+    avatar: 'assets/images/users/avatar-2.jpg',
+  },
+  {
+    name: 'Karen Savage',
+    country: 'Canada',
+    email: 'dummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '15 August 2024',
+    status: 'Active',
+    avatar: 'assets/images/users/avatar-3.jpg',
+  },
+  {
+    name: 'Steven Sharp',
+    country: 'France',
+    email: 'extradummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '08 August 2024',
+    status: 'Inactive',
+    avatar: 'assets/images/users/avatar-4.jpg',
+  },
+  {
+    name: 'Teresa Himes',
+    country: 'India',
+    email: 'extradummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '02 August 2024',
+    status: 'Active',
+    avatar: 'assets/images/users/avatar-4.jpg',
+  },
+  {
+    name: 'Ralph Denton',
+    country: 'UK',
+    email: 'dummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '28 July 2024',
+    status: 'Inactive',
+    avatar: 'assets/images/users/avatar-5.jpg',
+  },
+  {
+    name: 'Unity Pugh',
+    country: 'Germany',
+    email: 'extradummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '19 July 2024',
+    status: 'Active',
+    avatar: 'assets/images/users/avatar-1.jpg',
+  },
+  {
+    name: 'Scott Holland',
+    country: 'USA',
+    email: 'dummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '14 July 2024',
+    status: 'Active',
+    avatar: 'assets/images/users/avatar-2.jpg',
+  },
+  {
+    name: 'Karen Savage',
+    country: 'USA',
+    email: 'extradummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '10 July 2024',
+    status: 'Active',
+    avatar: 'assets/images/users/avatar-3.jpg',
+  },
+  {
+    name: 'Steven Sharp',
+    country: 'Russia',
+    email: 'dummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '21 June 2024',
+    status: 'Inactive',
+    avatar: 'assets/images/users/avatar-4.jpg',
+  },
+  {
+    name: 'Teresa Himes',
+    country: 'USA',
+    email: 'extradummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '12 June 2024',
+    status: 'Active',
+    avatar: 'assets/images/users/avatar-5.jpg',
+  },
+  {
+    name: 'Ralph Denton',
+    country: 'Sri Lanka',
+    email: 'dummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '17 May 2024',
+    status: 'Inactive',
+    avatar: 'assets/images/users/avatar-1.jpg',
+  },
+  {
+    name: 'Karen Savage',
+    country: 'USA',
+    email: 'extradummy@gmail.com',
+    phone: '+1 234 567 890',
+    date: '07 May 2024',
+    status: 'Active',
+    avatar: 'assets/images/users/avatar-2.jpg',
+  },
+]
