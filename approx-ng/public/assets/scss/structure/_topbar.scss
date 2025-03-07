@@ -8,10 +8,9 @@
   left: 0;
   z-index: 1000;
   transition: 0.3s;
-  box-shadow: none;
-  background-color: var(--#{$prefix}topbar-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fadb3e;
   padding: 0 calc($grid-gutter-width * .5);
-  border-bottom: 1px solid var(--#{$prefix}topbar-b-border-color);
 
   .topbar-custom {
     // background-color: var(--#{$prefix}topbar-bg);
@@ -69,7 +68,7 @@
 
       .form-control,
       .form-control:focus {
-        border: 1px solid var(--#{$prefix}topbar-b-border-color);
+        border: 1.5px solid var(--#{$prefix}topbar-b-border-color);
         font-size: 13px;
         height: 42px;
         // color: $header-search-color;

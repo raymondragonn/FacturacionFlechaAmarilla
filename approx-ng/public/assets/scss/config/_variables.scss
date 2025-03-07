@@ -10,11 +10,11 @@
 
 // Topbar
 $topbar-height:                        75px;
-$topbar-bg:                            #f9fbfd;
-$topbar-b-border-color:                #e3ebf6;
+$topbar-bg:                            $white;
+$topbar-b-border-color:                black;
 $topbar-nav-icon-bg:                   $white;
-$topbar-nav-icon-color:                #424d65;
-$topbar-box-shadow:                    0 3px 4px rgba(142,134,171,.10);
+$topbar-nav-icon-color:                $black;
+$topbar-box-shadow:                    0 3px 4px rgba(250, 219, 62, .10);
 
 // Sidebar
 $startbar-width:                       270px;
@@ -500,7 +500,7 @@ $position-values: (
 
 $body-text-align:           null;
 $body-color:                $gray-900;
-$body-bg:                   #f9fbfd;
+$body-bg:                   #cda67c; // FONDO DE PAGINAS
 
 $body-secondary-color:      #96a0b5;
 $body-secondary-bg:         $white; // card-bg

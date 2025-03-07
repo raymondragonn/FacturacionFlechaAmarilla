@@ -7,21 +7,21 @@ import { RouterLink } from '@angular/router'
   template: `
     <div class="brand">
       <a routerLink="/" class="logo">
-        <span class="me-6">
+        <span class="me-0">
           <img
-            src="assets/images/logo-sm.png"
+            src="assets/images/sm-logo.png"
             alt="logo-small"
             class="logo-sm"
           />
         </span>
-        <span class="">
+        <span>
           <img
-            src="assets/images/logo-light.png"
+            src="assets/images/logo.png"
             alt="logo-large"
             class="logo-lg logo-light"
           />
           <img
-            src="assets/images/logo-dark.png"
+            src="assets/images/logo.png"
             alt="logo-large"
             class="logo-lg logo-dark"
           />
