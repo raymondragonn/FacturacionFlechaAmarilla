@@ -228,10 +228,6 @@ export const MENU_ITEMS: MenuItem[] = [
         key: 'advanced-ui',
         icon: 'iconoir-peace-hand',
         collapsed: true,
-        badge: {
-          text: 'new',
-          variant: 'info',
-        },
         label: 'Advanced UI',
         subMenu: [
           {

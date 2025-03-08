@@ -46,7 +46,7 @@
             .menu-label {
                 text-transform: uppercase;
                 white-space: nowrap;
-                font-size: 10px;
+                font-size: 13px;
                 font-weight: $font-weight-semibold;
                 letter-spacing: 0.5px;
                 color: $black;
@@ -74,7 +74,7 @@
                 .nav-link {
                     position: relative;
                     color: var(--#{$prefix}menu-link-color);
-                    font-size: 13px;
+                    font-size: 15px;
                     font-weight: 500;
                     display: flex;
                     align-items: center;
@@ -110,14 +110,14 @@
                         &[aria-expanded="true"] {
                             &:after {
                                 transform: rotate(90deg);
-                                color: $primary;
+                                color: $black;
                             }
 
                             border-radius: 10px;
 
                             i,
                             span {
-                                color: $primary;
+                                color: $black;
                                 font-weight: 600;
                             }
                         }
