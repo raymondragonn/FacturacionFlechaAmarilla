@@ -77,10 +77,12 @@ $purple:  #5b58e6;
 $pink:    #fd3c97;
 $red:     #ef3463;
 $orange:  #fd7e14;
-$yellow:  #f4a14d;
+$yellow:  #ffcc00;
 $green:   #0da684;
 $teal:    #22c5ad;
 $cyan:    #41cbd8;
+$brown:   #cda67b;
+
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -98,7 +100,8 @@ $colors: (
   "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "brown":      $brown
 );
 // scss-docs-end colors-map
 
@@ -210,6 +213,16 @@ $cyan-600: shade-color($cyan, 20%);
 $cyan-700: shade-color($cyan, 40%);
 $cyan-800: shade-color($cyan, 60%);
 $cyan-900: shade-color($cyan, 80%);
+
+$brown-100: tint-color($brown, 80%);
+$brown-200: tint-color($brown, 60%);
+$brown-300: tint-color($brown, 40%);
+$brown-400: tint-color($brown, 20%);
+$brown-500: $brown;
+$brown-600: shade-color($brown, 20%);
+$brown-700: shade-color($brown, 40%);
+$brown-800: shade-color($brown, 60%);
+$brown-900: shade-color($brown, 80%);
 
 $blues: (
   "blue-100": $blue-100,
@@ -330,11 +343,24 @@ $cyans: (
   "cyan-800": $cyan-800,
   "cyan-900": $cyan-900
 );
+
+$browns: (
+  "brown-100": $brown-100,
+  "brown-200": $brown-200,
+  "brown-300": $brown-300,
+  "brown-400": $brown-400,
+  "brown-500": $brown-500,
+  "brown-600": $brown-600,
+  "brown-700": $brown-700,
+  "brown-800": $brown-800,
+  "brown-900": $brown-900
+);
+
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue;
-$secondary:     $gray-500;
+$primary:       $yellow;
+$secondary:     $brown;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
