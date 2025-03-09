@@ -156,6 +156,14 @@
                       Teléfono válido es requerido
                     </div>
                   </div>
+
+                  <div class="col-sm-6 ">
+                    <a
+                      [routerLink]="'/auth/log-in'"
+                      class="text-muted font-13"
+                      ><i class="dripicons-lock"></i>¿Ya tienes cuenta?</a
+                    >
+                  </div>
                   <!--end form-group-->
 
                   <!--<div class="form-group row mt-3">
@@ -185,6 +193,19 @@
                         <button class="btn btn-primary" type="submit">
                           Registrar <i class="fas fa-sign-in-alt ms-1"></i>
                         </button>
+                        <ngb-alert
+                          *ngIf="showAlert"
+                          type="success"
+                          class="shadow-sm border-theme-white-2"
+                          [dismissible]="false"
+                        >
+                          <div
+                            class="d-inline-flex justify-content-center align-items-center thumb-xs bg-success rounded-circle mx-auto me-1"
+                          >
+                            <i class="fas fa-check align-self-center mb-0 text-white"></i>
+                          </div>
+                          <strong> Usuario Registrado!</strong> Correctamente
+                        </ngb-alert>
                       </div>
                     </div>
                     <!--end col-->
