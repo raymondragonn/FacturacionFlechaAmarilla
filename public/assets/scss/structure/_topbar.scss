@@ -9,7 +9,7 @@
   z-index: 1000;
   transition: 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fadb3e;
+  background-color: $primary;
   padding: 0 calc($grid-gutter-width * .5);
 
   .topbar-custom {
