@@ -2,47 +2,66 @@ import { MenuItem } from '../core/models/menu.model'
 
 export const MENU_ITEMS: MenuItem[] = [
   {
-    key: 'principal',
-    label: 'principal',
+    key: 'general',
+    label: 'General',
     isTitle: true,
   },
   {
-    key: 'panel-general',
+    key: 'panel-control',
     icon: 'iconoir-report-columns',
-    label: 'General',
+    label: 'Panel de Control',
     url: 'index',
   },
   {
-    key: 'pagos',
+    key: 'calendario',
+    icon: 'iconoir-calendar',
+    label: 'Calendario',
+    url: '/apps/calendar',
+  },
+  {
+    key: 'modulo-facturas',
+    label: 'Modulo de Facturas',
+    isTitle: true,
+  },
+  {
+    key: 'ver-facturas',
+    icon: 'iconoir-task-list',
+    label: 'Facturas emitidas',
+    url: 'transactions',
+  },
+  {
+    key: 'agregar-factura',
+    icon: 'iconoir-task-list',
+    label: 'Nueva factura',
+    url: 'new-transaction',
+  },
+  {
+    key: 'formato-factura',
+    icon: 'iconoir-task-list',
+    label: 'Formato de Factura',
+    url: '/apps/invoice',
+  },
+  {
+    key: 'modulo-pagos',
+    label: 'Módulo de Pagos',
+    isTitle: true,
+  },
+  {
+    key: 'registro-pagos',
     icon: 'iconoir-hand-cash',
-    label: 'Pagos',
+    label: 'Registro de Pagos',
     url: 'payment',
   },
   {
-    key: 'gestion-facturas',
-    icon: 'iconoir-task-list',
-    label: 'Gestión de facturas',
-    collapsed: true,
-    subMenu: [
-      {
-        key: 'ver-facturas',
-        label: 'Facturas',
-        url: 'transactions',
-        parentKey: 'transactions',
-      },
-      {
-        key: 'agregar-factura',
-        label: 'Nueva factura',
-        url: 'new-transaction',
-        parentKey: 'transactions',
-      },
-      {
-        key: 'formato-factura',
-        label: 'Formato factura',
-        url: '/apps/invoice',
-        parentKey: 'transactions',
-      },
-    ],
+    key: 'gestion-clientes',
+    label: 'Gestión de Clientes',
+    isTitle: true,
+  },
+  {
+    key: 'clientes',
+    icon: 'iconoir-group',
+    label: 'Clientes',
+    url: 'users',
   },
   /*{
     key: 'cards',
@@ -60,12 +79,6 @@ export const MENU_ITEMS: MenuItem[] = [
     label: 'Taxes',
     url: 'taxes',
   },*/
-  {
-    key: 'clientes',
-    icon: 'iconoir-group',
-    label: 'Clientes',
-    url: 'users',
-  },
   /*{
     key: 'chat',
     icon: 'iconoir-chat-bubble',
@@ -79,14 +92,8 @@ export const MENU_ITEMS: MenuItem[] = [
     url: '/apps/contact-list',
   },*/
   {
-    key: 'calendario',
-    icon: 'iconoir-calendar',
-    label: 'Calendario',
-    url: '/apps/calendar',
-  },
-  {
     key: 'componentes',
-    label: 'componentes',
+    label: '*componentes',
     isTitle: true,
   },
   {
@@ -100,6 +107,7 @@ export const MENU_ITEMS: MenuItem[] = [
         icon: 'iconoir-compact-disc',
         label: 'UI Elements',
         collapsed: true,
+        parentKey: 'componentes',
         subMenu: [
           {
             key: 'base-ui-alerts',
@@ -229,6 +237,7 @@ export const MENU_ITEMS: MenuItem[] = [
         icon: 'iconoir-peace-hand',
         collapsed: true,
         label: 'Advanced UI',
+        parentKey: 'componentes',
         subMenu: [
           {
             key: 'advanced-ui-animation',
@@ -297,6 +306,7 @@ export const MENU_ITEMS: MenuItem[] = [
         icon: 'iconoir-journal-page',
         label: 'Forms',
         collapsed: true,
+        parentKey: 'componentes',
         subMenu: [
           {
             key: 'forms-basic-elements',
@@ -347,6 +357,7 @@ export const MENU_ITEMS: MenuItem[] = [
         label: 'Charts',
         collapsed: true,
         icon: 'iconoir-candlestick-chart',
+        parentKey: 'componentes',
         subMenu: [
           {
             key: 'charts-apex',
@@ -373,6 +384,7 @@ export const MENU_ITEMS: MenuItem[] = [
         icon: 'iconoir-table-rows ',
         label: 'Tables',
         collapsed: true,
+        parentKey: 'componentes',
         subMenu: [
           {
             key: 'tables-basic',
@@ -393,6 +405,7 @@ export const MENU_ITEMS: MenuItem[] = [
         icon: 'iconoir-trophy',
         label: 'Icons',
         collapsed: true,
+        parentKey: 'componentes',
         subMenu: [
           {
             key: 'icons-font-awesome',
@@ -425,6 +438,7 @@ export const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         icon: 'iconoir-navigator-alt',
         label: 'Maps',
+        parentKey: 'componentes',
         subMenu: [
           {
             key: 'maps-google',
@@ -451,6 +465,7 @@ export const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         label: 'Email Templates',
         icon: 'iconoir-send-mail',
+        parentKey: 'componentes',
         subMenu: [
           {
             key: 'email-templates-basic',
@@ -485,55 +500,55 @@ export const MENU_ITEMS: MenuItem[] = [
         key: 'page-profile',
         label: 'Profile',
         url: '/pages/profile',
-        parentKey: 'pages',
+        parentKey: 'paginas',
       },
       {
         key: 'page-notifications',
         label: 'Notifications',
         url: '/pages/notifications',
-        parentKey: 'pages',
+        parentKey: 'paginas',
       },
       {
         key: 'page-timeline',
         label: 'Timeline',
         url: '/pages/timeline',
-        parentKey: 'pages',
+        parentKey: 'paginas',
       },
       {
         key: 'page-tree-view',
         label: 'Treeview',
         url: '/pages/treeview',
-        parentKey: 'pages',
+        parentKey: 'paginas',
       },
       {
         key: 'page-starter',
         label: 'Starter Page',
         url: '/pages/starter',
-        parentKey: 'pages',
+        parentKey: 'paginas',
       },
       {
         key: 'page-pricing',
         label: 'Pricing',
         url: '/pages/pricing',
-        parentKey: 'pages',
+        parentKey: 'paginas',
       },
       {
         key: 'page-blogs',
         label: 'Blogs',
         url: '/pages/blogs',
-        parentKey: 'pages',
+        parentKey: 'paginas',
       },
       {
         key: 'page-faqs',
         label: 'FAQs',
         url: '/pages/faqs',
-        parentKey: 'pages',
+        parentKey: 'paginas',
       },
       {
         key: 'page-gallery',
         label: 'Gallery',
         url: '/pages/gallery',
-        parentKey: 'pages',
+        parentKey: 'paginas',
       },
     ],
   },
@@ -548,44 +563,44 @@ export const MENU_ITEMS: MenuItem[] = [
         key: 'log-in',
         label: 'Log in',
         url: '/auth/log-in',
-        parentKey: 'page-authentication',
+        parentKey: 'autenticacion',
       },
       {
         key: 'register',
         label: 'Register',
         url: '/auth/register',
-        parentKey: 'page-authentication',
+        parentKey: 'autenticacion',
       },
       {
         key: 'reset-pass',
         label: 'Re-Password',
         url: '/auth/reset-pass',
-        parentKey: 'page-authentication',
+        parentKey: 'autenticacion',
       },
       {
         key: 'lock-screen',
         label: 'Lock Screen',
         url: '/auth/lock-screen',
-        parentKey: 'page-authentication',
+        parentKey: 'autenticacion',
       },
       {
         key: 'maintenance',
         label: 'Maintenance',
         url: '/maintenance',
         target: '_blank',
-        parentKey: 'page-authentication',
+        parentKey: 'autenticacion',
       },
       {
         key: 'error-404',
         label: 'Error 404',
         url: '/not-found',
-        parentKey: 'page-authentication',
+        parentKey: 'autenticacion',
       },
       {
         key: 'error-500',
         label: 'Error 500',
         url: '/error-500',
-        parentKey: 'page-authentication',
+        parentKey: 'autenticacion',
       },
     ],
   },
