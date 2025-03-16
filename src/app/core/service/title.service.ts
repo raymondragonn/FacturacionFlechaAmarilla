@@ -31,7 +31,7 @@ export class TitleService {
     if (route.snapshot.data['title']) {
       this.titleService.setTitle(
         route.snapshot.data['title'] +
-          ' | Approx - Responsive Angular Admin & Dashboard Template'
+          ' | Flecha Amarilla'
       )
     }
   }

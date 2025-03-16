@@ -1,35 +1,29 @@
 <pagetitle [title]="'Panel de Control'" />
 
-<div class="row justify-content-center">
-  <div class="col-md-6 col-lg-3 order-2 order-lg-1">
-    <app-balance-detail />
+<div>
+  <div class="row justify-content-center">
+    <div class="col-lg-6 order-1 ">
+      <app-stats />
+      <div id="inline_calendar" appDatepicker></div>
+    </div>
+    <div class="col-lg-6 order-1 ">
+      <app-stats />
+    </div>
   </div>
-  <div class="col-md-12 col-lg-6 order-1 order-lg-2">
-    <app-transaction-history />
+  <div class="row justify-content-center">
+    <div class="col-lg-8 order-2">
+      <app-transaction-history />
+    </div>
+    <div class="col-lg-4 order-3">
+      <app-balance-detail />
+    </div>
   </div>
-  <div class="col-md-6 col-lg-3 order-3 order-lg-3">
-    <app-send-money />
-  </div>
-</div>
-
-<div class="row justify-content-center">
-  <div class="col-md-12 col-lg-6">
-    <app-report />
-  </div>
-  <div class="col-md-6 col-lg-3">
-    <app-cash-flow />
-  </div>
-  <div class="col-md-6 col-lg-3">
-    <app-exchange-rate />
-  </div>
-</div>
-
-<div class="row justify-content-center">
-  <div class="col-lg-7">
-    <app-cards />
-  </div>
-  <div class="col-lg-5">
-    <app-stats />
+  <div class="row justify-content-center">
+    <div class="col-lg-7 order-4">
+      <app-report />
+    </div>
+    <div class="col-lg-5 order-5">
+      <app-exchange-rate />
+    </div>
   </div>
 </div>
-

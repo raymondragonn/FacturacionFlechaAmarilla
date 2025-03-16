@@ -42,7 +42,7 @@ export class StatsComponent {
       offsetX: 0,
       offsetY: 0,
     },
-    labels: ['Income', 'Expense'],
+    labels: ['Ingresos', 'Egresos'],
     colors: ['#2b3eb1', '#fc7100'],
 
     responsive: [
