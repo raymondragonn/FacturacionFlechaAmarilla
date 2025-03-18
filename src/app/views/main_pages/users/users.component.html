@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col-12">
     <div class="card">
-      <div class="card-header">
+      <div class="card-header bg-primary mb-2">
         <div class="row align-items-center">
           <div class="col">
             <h4 class="card-title">Usuarios</h4>
@@ -12,7 +12,7 @@
           <div class="col-auto">
             <button
               (click)="open(userModal)"
-              class="btn bg-primary text-black"
+              class="btn bg-white text-black"
               data-bs-toggle="modal"
               data-bs-target="#addUser"
             >
@@ -220,6 +220,20 @@
         />
       </div>
     </div>
+    <div class="mb-2">
+      <label for="rol">Rol</label>
+      <div class="input-group">
+        <span class="input-group-text" id="rol">
+          <i class="fas fa-user-tag"></i>
+        </span>
+        <select class="form-control" id="rol" aria-label="rol">
+          <option value="" disabled selected>Selecciona un rol</option>
+          <option value="Administrador">Administrador</option>
+          <option value="Contador">Contador</option>
+        </select>
+      </div>
+    </div>
+    
     <div class="row">
       <div class="col-md-6">
         <div class="mb-2">

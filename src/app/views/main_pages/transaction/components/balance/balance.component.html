@@ -1,52 +1,45 @@
-<div class="row justify-content-center">
-  <div class="col-md-12 col-lg-12">
-    <div class="card bg-corner-img">
-      <div class="card-body" (click)="redirectionToNewTransaction()" style="cursor:pointer;">
-        <div class="row mb-1 d-flex justify-content-center">
-          <div class="col-9 align-self-center">
-            <p class="text-black text-uppercase mb-0 fw-medium fs-15">
-              Crear Factura
-            </p>
-          </div>
-          <!--end col-->
-          <div class="col-3 align-self-center">
-            <div
-              class="d-flex justify-content-center align-items-center thumb-md border-dashed border-secondary rounded mx-auto">
-              <i class="fas fa-money-check fs-22 align-self-center mb-0 text-gray-800"></i>
-            </div>
-          </div>
-          <!--end col-->
+<div class="row justify-content-center g-3">
+  <!-- Tarjeta "Crear Factura" -->
+  <div class="col-md-6">
+    <div class="card rounded-3 shadow-sm border-0 bg-light position-relative hover-card" (click)="redirectionToNewTransaction()" style="cursor:pointer;">
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <div>
+          <p class="text-dark fw-semibold fs-16 mb-0">Crear Factura</p>
+        </div>
+        <div class="icon-container">
+          <i class="fas fa-money-check fs-22 text-primary"></i>
         </div>
       </div>
-      <!--end card-body-->
-
     </div>
-    <!--end card-->
   </div>
-  <!--end col-->
-  <div class="col-md-12 col-lg-12">
-    <div class="card bg-corner-img">
-      <div class="card-body" (click)="redirectionToNewClient()" style="cursor:pointer;">
-        <div class="row mb-1 d-flex justify-content-center">
-          <div class="col-9 align-self-center">
-            <p class="text-black text-uppercase mb-0 fw-medium fs-15">
-              Nuevo cliente
-            </p>
-          </div>
-          <div class="col-3 align-self-center">
-            <div
-              class="d-flex justify-content-center align-items-center thumb-md border-dashed border-secondary rounded mx-auto">
-              <i class="fas fa-receipt fs-22 align-self-center mb-0 text-gray-800"></i>
-            </div>
-          </div>
-          <!--end col-->
+
+  <!-- Tarjeta "Nuevo Cliente" -->
+  <div class="col-md-6">
+    <div class="card rounded-3 shadow-sm border-0 bg-light position-relative hover-card" (click)="redirectionToNewClient()" style="cursor:pointer;">
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <div>
+          <p class="text-dark fw-semibold fs-16 mb-0">Nuevo Cliente</p>
         </div>
-        <!--end row-->
-
+        <div class="icon-container">
+          <i class="fas fa-user-plus fs-22 text-success"></i>
+        </div>
       </div>
-      <!--end card-body-->
-
     </div>
-    <!--end card-->
+  </div>
+</div>
+
+<!-- Nueva fila para "Facturas Pendientes" -->
+<div class="row justify-content-center g-3">
+  <div class="col-12">
+    <div class="card rounded-3 shadow-sm border-0 bg-light position-relative hover-card" (click)="redirectionToPendingInvoices()" style="cursor:pointer;">
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <div>
+          <p class="text-dark fw-semibold fs-16 mb-0">Facturas Pendientes</p>
+        </div>
+        <div class="icon-container">
+          <i class="fas fa-exclamation-circle fs-22 text-danger"></i>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
