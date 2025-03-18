@@ -1,4 +1,4 @@
-<pagetitle [title]="'Users'" />
+<pagetitle [title]="'Usuarios'" />
 
 <div class="row">
   <div class="col-12">
@@ -6,17 +6,17 @@
       <div class="card-header">
         <div class="row align-items-center">
           <div class="col">
-            <h4 class="card-title">Users Details</h4>
+            <h4 class="card-title">Usuarios</h4>
           </div>
           <!--end col-->
           <div class="col-auto">
             <button
               (click)="open(userModal)"
-              class="btn bg-primary text-white"
+              class="btn bg-primary text-black"
               data-bs-toggle="modal"
               data-bs-target="#addUser"
             >
-              <i class="fas fa-plus me-1"></i> Add User
+              <i class="fas fa-plus me-1"></i> Nuevo Usuario
             </button>
           </div>
           <!--end col-->
@@ -38,12 +38,12 @@
               <option [value]="20">20</option>
               <option [value]="25">25</option>
             </select>
-            entries per page
+            Usuarios por página
           </label>
           <input
             class="datatable-input p-1"
             (input)="searchName($event)"
-            placeholder="Search..."
+            placeholder="Buscar..."
             type="text"
             name="search"
             title="Search within table"
@@ -54,12 +54,12 @@
           <table class="table mb-0" id="datatable_1">
             <thead class="table-light">
               <tr>
-                <th sortable="name" (sort)="onSort($event)">Name</th>
-                <th sortable="email" (sort)="onSort($event)">Email</th>
-                <th sortable="phone" (sort)="onSort($event)">Mobile No</th>
-                <th sortable="" (sort)="onSort($event)">Registered On</th>
-                <th sortable="status" (sort)="onSort($event)">Status</th>
-                <th class="text-end">Action</th>
+                <th sortable="name" (sort)="onSort($event)">Nombre</th>
+                <th sortable="email" (sort)="onSort($event)">Correo</th>
+                <th sortable="phone" (sort)="onSort($event)">Teléfono</th>
+                <th sortable="" (sort)="onSort($event)">Registrado En</th>
+                <th sortable="status" (sort)="onSort($event)">Estatus</th>
+                <th class="text-end">Acción</th>
               </tr>
             </thead>
             <tbody>
@@ -73,8 +73,8 @@
                         alt="..."
                       />
                       <div class="flex-grow-1 text-truncate">
-                        <h6 class="m-0">{{ item.name }}</h6>
-                        <p class="fs-12 text-muted mb-0">{{ item.country }}</p>
+                        <h6 class="m-0">{{ item.name }} {{ item.apellidoPaterno }} {{ item.apellidoMaterno }}</h6>
+                        <p class="fs-12 text-muted mb-0">{{ item.rol }}</p>
                       </div>
                       <!--end media body-->
                     </div>
@@ -120,7 +120,7 @@
           @if (totalEntries > 0) {
             <div class="d-flex justify-content-between mt-3 align-items-center">
               <div class="datatable-info">
-                Showing {{ filteredEntries }} of {{ totalEntries }} entries
+                Mostrando {{ filteredEntries }} de {{ totalEntries }} usuarios
               </div>
             </div>
           }
@@ -141,7 +141,7 @@
   aria-hidden="true"
 >
   <div class="modal-header">
-    <h5 class="modal-title" id="addUserLabel">Add User Detail</h5>
+    <h5 class="modal-title" id="addUserLabel">Agregar Información De Usuario</h5>
     <button
       type="button"
       class="btn-close"
@@ -157,15 +157,15 @@
           class="fas fa-user text-muted thumb-xl rounded me-2 border-dashed"
         ></i>
         <div class="flex-grow-1 text-truncate">
-          <label class="btn btn-primary text-light">
-            Add Avatar <input type="file" hidden="" />
+          <label class="btn btn-primary text-black">
+            Agregar Foto <input type="file" hidden="" />
           </label>
         </div>
         <!--end media body-->
       </div>
     </div>
     <div class="mb-2">
-      <label for="fullName">Full Name</label>
+      <label for="fullName">Nombre</label>
       <div class="input-group">
         <span class="input-group-text" id="fullName"
           ><i class="far fa-user"></i
@@ -173,13 +173,41 @@
         <input
           type="text"
           class="form-control"
-          placeholder="Name"
+          placeholder="Nombre"
           aria-label="FullName"
         />
       </div>
     </div>
     <div class="mb-2">
-      <label for="email">Email</label>
+      <label for="apellidoP">Apellido Paterno</label>
+      <div class="input-group">
+        <span class="input-group-text" id="apellidoP"
+          ><i class="far fa-user"></i
+        ></span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Apellido Paterno"
+          aria-label="FullName"
+        />
+      </div>
+    </div>
+    <div class="mb-2">
+      <label for="apellidoM">Apellido Materno</label>
+      <div class="input-group">
+        <span class="input-group-text" id="apellidoM"
+          ><i class="far fa-user"></i
+        ></span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Apellido Materno"
+          aria-label="FullName"
+        />
+      </div>
+    </div>
+    <div class="mb-2">
+      <label for="email">Correo</label>
       <div class="input-group">
         <span class="input-group-text" id="email"
           ><i class="far fa-envelope"></i
@@ -195,7 +223,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="mb-2">
-          <label for="ragisterDate">Register Date</label>
+          <label for="ragisterDate">Fecha de Registro</label>
           <div class="input-group">
             <span class="input-group-text" id="ragisterDate"
               ><i class="far fa-calendar"></i
@@ -212,7 +240,7 @@
       <!--end col-->
       <div class="col-md-6">
         <div class="mb-2">
-          <label for="mobilleNo">Mobille No</label>
+          <label for="mobilleNo">Teléfono</label>
           <div class="input-group">
             <span class="input-group-text" id="mobilleNo"
               ><i class="fas fa-phone"></i
@@ -231,6 +259,6 @@
     <!--end row-->
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-primary w-100">Add User</button>
+    <button type="button" class="btn btn-primary w-100">Nuevo Usuario</button>
   </div>
 </ng-template>
