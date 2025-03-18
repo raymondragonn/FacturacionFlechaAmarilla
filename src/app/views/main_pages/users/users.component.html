@@ -3,13 +3,18 @@
 <div class="row">
   <div class="col-12">
     <div class="card">
-      <div class="card-header bg-primary mb-2">
+      <div class="card-header bg-light mb-2">
         <div class="row align-items-center">
-          <div class="col">
-            <h4 class="card-title">Usuarios</h4>
-          </div>
-          <!--end col-->
-          <div class="col-auto">
+          <div class="d-flex justify-content-between pb-0 px-2 col">
+            <input
+              class="datatable-input p-1 rounded-3"
+              (input)="searchName($event)"
+              placeholder="Buscar usuario..."
+              type="text"
+              name="search"
+              title="Search within table"
+              aria-controls="datatable_1"
+            />
             <button
               (click)="open(userModal)"
               class="btn bg-white text-black"
@@ -20,36 +25,29 @@
             </button>
           </div>
           <!--end col-->
+          <div class="col-auto">
+            <label>
+              <select
+                (change)="onRowsChange($event)"
+                class="datatable-selector p-1"
+                name="per-page"
+              >
+                <option [value]="5">5</option>
+                <option [value]="10" selected="">10</option>
+                <option [value]="15">15</option>
+                <option [value]="20">20</option>
+                <option [value]="25">25</option>
+              </select>
+              <span style="color:black"> Usuarios por página</span>
+            </label>
+          </div>
+          <!--end col-->
+          
         </div>
         <!--end row-->
       </div>
       <!--end card-header-->
       <div class="card-body pt-0">
-        <div class="d-flex justify-content-between pb-1 px-1">
-          <label>
-            <select
-              (change)="onRowsChange($event)"
-              class="datatable-selector p-1"
-              name="per-page"
-            >
-              <option [value]="5">5</option>
-              <option [value]="10" selected="">10</option>
-              <option [value]="15">15</option>
-              <option [value]="20">20</option>
-              <option [value]="25">25</option>
-            </select>
-            Usuarios por página
-          </label>
-          <input
-            class="datatable-input p-1"
-            (input)="searchName($event)"
-            placeholder="Buscar..."
-            type="text"
-            name="search"
-            title="Search within table"
-            aria-controls="datatable_1"
-          />
-        </div>
         <div class="table-responsive">
           <table class="table mb-0" id="datatable_1">
             <thead class="table-light">
@@ -69,7 +67,7 @@
                     <div class="d-flex align-items-center">
                       <img
                         [src]="item.avatar"
-                        class="me-2 thumb-md align-self-center rounded"
+                        class="me-2 thumb-md align-self-center rounded-5"
                         alt="..."
                       />
                       <div class="flex-grow-1 text-truncate">

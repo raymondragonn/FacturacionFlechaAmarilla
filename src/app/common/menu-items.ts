@@ -34,7 +34,7 @@ export const MENU_ITEMS: MenuItem[] = [
     key: 'clientes',
     icon: 'iconoir-group',
     label: 'Clientes',
-    url: 'users',
+    url: 'clients',
   },
   {
     key: 'users',

@@ -6,6 +6,7 @@ import { AddTransactionComponent } from './main_pages/add-transaction/add-transa
 import { CardsComponent } from './main_pages/cards/cards.component'
 import { UsersComponent } from './main_pages/users/users.component'
 import { TaxesComponent } from './main_pages/taxes/taxes.component'
+import { ClientsComponent } from './main_pages/clients/clients.component'
 
 export const VIEW_ROUTES: Route[] = [
   {
@@ -94,5 +95,10 @@ export const VIEW_ROUTES: Route[] = [
     path: 'users',
     component: UsersComponent,
     data: { title: 'Usuarios' },
+  },
+  {
+    path: 'clients',
+    component: ClientsComponent,
+    data: { title: 'Clientes' },
   },
 ]
