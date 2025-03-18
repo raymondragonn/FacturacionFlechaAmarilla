@@ -13,12 +13,12 @@ export const PAGES_ROUTES: Route[] = [
   {
     path: 'profile',
     component: ProfileComponent,
-    data: { title: 'Profile' },
+    data: { title: 'Mi perfil' },
   },
   {
     path: 'notifications',
     component: NotificationsComponent,
-    data: { title: 'Notifications' },
+    data: { title: 'Notificaciones' },
   },
   {
     path: 'timeline',
@@ -48,7 +48,7 @@ export const PAGES_ROUTES: Route[] = [
   {
     path: 'faqs',
     component: FaqComponent,
-    data: { title: 'FAQ' },
+    data: { title: 'Soporte Técnico' },
   },
   {
     path: 'gallery',

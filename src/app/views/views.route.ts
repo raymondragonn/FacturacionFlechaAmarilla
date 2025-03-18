@@ -63,22 +63,22 @@ export const VIEW_ROUTES: Route[] = [
   {
     path: 'index',
     component: DashboardComponent,
-    data: { title: 'Dashboard' },
+    data: { title: 'Panel de Control' },
   },
   {
     path: 'payment',
     component: PaymentComponent,
-    data: { title: 'Payment' },
+    data: { title: 'Pedidos' },
   },
   {
     path: 'transactions',
     component: TransactionComponent,
-    data: { title: 'Transaction' },
+    data: { title: 'Facturas' },
   },
   {
     path: 'new-transaction',
     component: AddTransactionComponent,
-    data: { title: 'New Transaction' },
+    data: { title: 'Nueva Factura' },
   },
   {
     path: 'cards',
@@ -93,6 +93,6 @@ export const VIEW_ROUTES: Route[] = [
   {
     path: 'users',
     component: UsersComponent,
-    data: { title: 'User' },
+    data: { title: 'Usuarios' },
   },
 ]

@@ -8,21 +8,21 @@ export const AUTH_ROUTES: Route[] = [
   {
     path: 'log-in',
     component: LoginComponent,
-    data: { title: 'Login' },
+    data: { title: 'Inicio Sesión' },
   },
   {
     path: 'register',
     component: RegisterComponent,
-    data: { title: 'Register' },
+    data: { title: 'Registro' },
   },
   {
     path: 'recover-pw',
     component: RecoverPwComponent,
-    data: { title: 'Recover Password' },
+    data: { title: 'Recuperar Contraseña' },
   },
   {
     path: 'lock-screen',
     component: LockScreenComponent,
-    data: { title: 'Lock Screen' },
+    data: { title: 'Bloqueo Sesión' },
   },
 ]
