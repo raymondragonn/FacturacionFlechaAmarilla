@@ -48,8 +48,9 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.submitted = true
-    if (this.signInForm.valid) {
+    this.submitted = true;
+    this.router.navigate(['/index']);
+    /*if (this.signInForm.valid) {
       const username = this.formValues['username'].value
       const password = this.formValues['password'].value
       this.authService.LogInUser({ username: username, password: password}).subscribe((res) => {
@@ -66,6 +67,6 @@ export class LoginComponent implements OnInit {
 
       // Login Api
       // this.store.dispatch(login({ username: username, password: password }))
-    }
+    }*/
   }
 }

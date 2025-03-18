@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
+import { Router } from '@angular/router'
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap'
 @Component({
   selector: 'app-balance',
@@ -18,9 +19,21 @@ export class BalanceComponent {
     { img: 'assets/images/logos/ame-bank.png', text: 'xx21' },
   ]
 
-  constructor() {
+  constructor(private router: Router) {
     this.selectedValue = this.data[0]
     this.placeholder = this.data[0]?.text || 'Select an option'
+  }
+
+  ngOnInit(): void {
+    // Inicializa tus datos aquí si es necesario
+  }
+
+  redirectionToNewTransaction(): void {
+    this.router.navigate(['/new-transaction']); // Ajusta la ruta según tus necesidades
+  }
+
+  redirectionToNewClient(): void {
+    this.router.navigate(['/users']); // Ajusta la ruta según tus necesidades
   }
 
   toggleOptions() {

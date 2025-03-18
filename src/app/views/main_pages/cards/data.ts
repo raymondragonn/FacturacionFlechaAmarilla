@@ -1,6 +1,6 @@
 export const cardsData = [
   {
-    fecha: '20 julio 2024 03:25pm',
+    date: '20 julio 2024 03:25pm',
     serie: 'A1',
     folio: '1001',
     uuid: '660f8400-a19b-42e4-b617-556755441111',

@@ -1,59 +1,51 @@
 <div class="row justify-content-center">
   <div class="col-md-12 col-lg-12">
     <div class="card bg-corner-img">
-      <div class="card-body">
+      <div class="card-body" (click)="redirectionToNewTransaction()" style="cursor:pointer;">
         <div class="row d-flex justify-content-center">
           <div class="col-9 align-self-center">
-            <p class="text-black text-uppercase mb-0 fw-normal fs-15">
-              Nueva Factura
+            <p class="text-black text-uppercase mb-0 fw-medium fs-15">
+              Crear Factura
             </p>
           </div>
           <!--end col-->
           <div class="col-3 align-self-center">
             <div
-              class="d-flex justify-content-center align-items-center thumb-md border-dashed border-black rounded mx-auto"
-            >
-              <i
-                class="fas fa-money-check fs-22 align-self-center mb-0 text-black"
-              ></i>
+              class="d-flex justify-content-center align-items-center thumb-md border-dashed border-secondary rounded mx-auto">
+              <i class="fas fa-money-check fs-22 align-self-center mb-0 text-gray-800"></i>
             </div>
           </div>
           <!--end col-->
         </div>
-        <!--end row-->
-        
       </div>
       <!--end card-body-->
-      
+
     </div>
     <!--end card-->
   </div>
   <!--end col-->
   <div class="col-md-12 col-lg-12">
     <div class="card bg-corner-img">
-      <div class="card-body">
+      <div class="card-body" (click)="redirectionToNewClient()" style="cursor:pointer;">
         <div class="row d-flex justify-content-center">
-          <div class="col-9 align-self-center" >
-            <p class="text-black text-uppercase mb-0 fw-normal fs-15">
-              Formato de Factura
+          <div class="col-9 align-self-center">
+            <p class="text-black text-uppercase mb-0 fw-medium fs-15">
+              Nuevo cliente
             </p>
           </div>
           <div class="col-3 align-self-center">
             <div
-              class="d-flex justify-content-center align-items-center thumb-md border-dashed border-black rounded mx-auto"
-            >
-              <i
-                class="fas fa-receipt fs-22 align-self-center mb-0 text-gray-900"
-              ></i>
+              class="d-flex justify-content-center align-items-center thumb-md border-dashed border-secondary rounded mx-auto">
+              <i class="fas fa-receipt fs-22 align-self-center mb-0 text-gray-800"></i>
             </div>
           </div>
           <!--end col-->
         </div>
         <!--end row-->
-        
+
       </div>
       <!--end card-body-->
-      
+
     </div>
     <!--end card-->
   </div>
