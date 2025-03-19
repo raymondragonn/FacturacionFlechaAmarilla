@@ -14,6 +14,7 @@ import { Store } from '@ngrx/store'
 import { AlertsComponent } from '../../ui/alerts/alerts.component'
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'
 import { CommonModule } from '@angular/common'
+import { AuthenticationService } from '@/app/core/service/auth.service'
 
 
 @Component({
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
   private token: string = ''
   showAlert: boolean = false
 
-  constructor(private authService: AuthService){
+  constructor(private authServicePrueba: AuthService, private authService: AuthenticationService){
 
   }
 
@@ -53,10 +54,10 @@ export class LoginComponent implements OnInit {
     /*if (this.signInForm.valid) {
       const username = this.formValues['username'].value
       const password = this.formValues['password'].value
-      this.authService.LogInUser({ username: username, password: password}).subscribe((res) => {
+      this.authService.login( username, password).subscribe((res) => {
         const { token, user } = res as { token: string, user: string };
         localStorage.setItem('currentUser', JSON.stringify({ username: user, token: token}));  
-        this.router.navigate(['/index']);
+        this.router.navigate(['']);
       },(error) => {
         console.log(error);
         this.showAlert = true;
