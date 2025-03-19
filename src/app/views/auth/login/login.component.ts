@@ -1,4 +1,3 @@
-import { AuthService } from '@/app/servicios/auth.service'
 import { login } from '@/app/store/authentication/authentication.actions'
 import { Component, OnInit, inject } from '@angular/core'
 import {
@@ -7,7 +6,6 @@ import {
   UntypedFormBuilder,
   UntypedFormGroup,
   Validators,
-  
 } from '@angular/forms'
 import { Router, RouterLink } from '@angular/router'
 import { Store } from '@ngrx/store'
@@ -15,11 +13,12 @@ import { AlertsComponent } from '../../ui/alerts/alerts.component'
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'
 import { CommonModule } from '@angular/common'
 import { AuthenticationService } from '@/app/core/service/auth.service'
+import { AuthService } from '@/app/servicios/auth.service'
 
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink, FormsModule, ReactiveFormsModule,NgbAlertModule,CommonModule],
+  imports: [RouterLink, FormsModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styles: ``,
 })
@@ -35,12 +34,12 @@ export class LoginComponent implements OnInit {
 
   public fb = inject(UntypedFormBuilder)
   public store = inject(Store)
-  private router = inject(Router)
+  public router = inject(Router)
 
   ngOnInit(): void {
     this.signInForm = this.fb.group({
-      username: ['',[Validators.required]],
-      password: ['',[Validators.required]],
+      email: ['user@demo.com', [Validators.required, Validators.email]],
+      password: ['123456', [Validators.required]],
     })
   }
 

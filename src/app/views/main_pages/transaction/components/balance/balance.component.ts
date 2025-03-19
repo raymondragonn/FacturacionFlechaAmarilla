@@ -36,6 +36,10 @@ export class BalanceComponent {
     this.router.navigate(['/users']); // Ajusta la ruta según tus necesidades
   }
 
+  redirectionToPendingInvoices(): void {
+    this.router.navigate(['/payment']); // Ajusta la ruta según tus necesidades
+  }
+
   toggleOptions() {
     this.optionsVisible = !this.optionsVisible
   }

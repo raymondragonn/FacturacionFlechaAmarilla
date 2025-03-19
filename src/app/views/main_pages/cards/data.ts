@@ -12,7 +12,7 @@ export const cardsData = [
     total: '$812',
   },
   {
-    fecha: '21 julio 2024 10:15am',
+    date: '21 julio 2024 10:15am',
     serie: 'B2',
     folio: '1002',
     uuid: '660f8400-a19b-42e4-b617-556755442222',
@@ -24,7 +24,7 @@ export const cardsData = [
     total: '$580',
   },
   {
-    fecha: '22 julio 2024 02:45pm',
+    date: '22 julio 2024 02:45pm',
     serie: 'C3',
     folio: '1003',
     uuid: '770g8400-b29c-53d5-c718-667855443333',
@@ -36,7 +36,7 @@ export const cardsData = [
     total: '$1,392',
   },
   {
-    fecha: '23 julio 2024 05:30pm',
+    date: '23 julio 2024 05:30pm',
     serie: 'D4',
     folio: '1004',
     uuid: '880h8400-c39d-64e6-d819-778955444444',
@@ -48,7 +48,7 @@ export const cardsData = [
     total: '$754',
   },
   {
-    fecha: '24 julio 2024 09:00am',
+    date: '24 julio 2024 09:00am',
     serie: 'E5',
     folio: '1005',
     uuid: '990i8400-d49e-75f7-e920-889955445555',
@@ -60,7 +60,7 @@ export const cardsData = [
     total: '$986',
   },
   {
-    fecha: '25 julio 2024 11:10am',
+    date: '25 julio 2024 11:10am',
     serie: 'F6',
     folio: '1006',
     uuid: 'AA0j8400-e59f-86g8-f021-990955446666',
@@ -72,7 +72,7 @@ export const cardsData = [
     total: '$1,160',
   },
   {
-    fecha: '26 julio 2024 02:00pm',
+    date: '26 julio 2024 02:00pm',
     serie: 'G7',
     folio: '1007',
     uuid: 'BB1k9500-f67g-97h9-h032-112355447777',
@@ -84,7 +84,7 @@ export const cardsData = [
     total: '$1,740',
   },
   {
-    fecha: '27 julio 2024 04:30pm',
+    date: '27 julio 2024 04:30pm',
     serie: 'H8',
     folio: '1008',
     uuid: 'CC2l0600-g78h-78j0-i043-223466448888',
@@ -96,7 +96,7 @@ export const cardsData = [
     total: '$1,044',
   },
   {
-    fecha: '28 julio 2024 09:30am',
+    date: '28 julio 2024 09:30am',
     serie: 'I9',
     folio: '1009',
     uuid: 'DD3m1700-h89i-89k1-j154-334577449999',
@@ -108,7 +108,7 @@ export const cardsData = [
     total: '$696',
   },
   {
-    fecha: '29 julio 2024 12:15pm',
+    date: '29 julio 2024 12:15pm',
     serie: 'J10',
     folio: '1010',
     uuid: 'EE4n2800-i90j-90l2-k265-445688550000',

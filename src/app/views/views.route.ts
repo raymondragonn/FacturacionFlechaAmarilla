@@ -6,6 +6,7 @@ import { AddTransactionComponent } from './main_pages/add-transaction/add-transa
 import { CardsComponent } from './main_pages/cards/cards.component'
 import { UsersComponent } from './main_pages/users/users.component'
 import { TaxesComponent } from './main_pages/taxes/taxes.component'
+import { ClientsComponent } from './main_pages/clients/clients.component'
 
 export const VIEW_ROUTES: Route[] = [
   {
@@ -63,22 +64,22 @@ export const VIEW_ROUTES: Route[] = [
   {
     path: 'index',
     component: DashboardComponent,
-    data: { title: 'Dashboard' },
+    data: { title: 'Panel de Control' },
   },
   {
     path: 'payment',
     component: PaymentComponent,
-    data: { title: 'Payment' },
+    data: { title: 'Pedidos' },
   },
   {
     path: 'transactions',
     component: TransactionComponent,
-    data: { title: 'Transaction' },
+    data: { title: 'Facturas' },
   },
   {
     path: 'new-transaction',
     component: AddTransactionComponent,
-    data: { title: 'New Transaction' },
+    data: { title: 'Nueva Factura' },
   },
   {
     path: 'cards',
@@ -93,6 +94,11 @@ export const VIEW_ROUTES: Route[] = [
   {
     path: 'users',
     component: UsersComponent,
-    data: { title: 'User' },
+    data: { title: 'Usuarios' },
+  },
+  {
+    path: 'clients',
+    component: ClientsComponent,
+    data: { title: 'Clientes' },
   },
 ]

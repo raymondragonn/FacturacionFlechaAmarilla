@@ -19,48 +19,27 @@ export const MENU_ITEMS: MenuItem[] = [
     url: '/apps/calendar',
   },
   {
-    key: 'modulo-facturas',
-    label: 'Modulo de Facturas',
-    isTitle: true,
-  },
-  {
     key: 'ver-facturas',
     icon: 'iconoir-task-list',
-    label: 'Facturas emitidas',
+    label: 'Facturas',
     url: 'transactions',
-  },
-  {
-    key: 'agregar-factura',
-    icon: 'iconoir-task-list',
-    label: 'Nueva factura',
-    url: 'new-transaction',
-  },
-  {
-    key: 'formato-factura',
-    icon: 'iconoir-task-list',
-    label: 'Formato de Factura',
-    url: '/apps/invoice',
-  },
-  {
-    key: 'modulo-pagos',
-    label: 'Módulo de Pagos',
-    isTitle: true,
   },
   {
     key: 'registro-pagos',
     icon: 'iconoir-hand-cash',
-    label: 'Registro de Pagos',
+    label: 'Pedidos',
     url: 'payment',
-  },
-  {
-    key: 'gestion-clientes',
-    label: 'Gestión de Clientes',
-    isTitle: true,
   },
   {
     key: 'clientes',
     icon: 'iconoir-group',
     label: 'Clientes',
+    url: 'clients',
+  },
+  {
+    key: 'users',
+    icon: 'iconoir-group',
+    label: 'Usuarios',
     url: 'users',
   },
   /*{

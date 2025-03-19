@@ -18,11 +18,11 @@ export const APPS_ROUTES: Route[] = [
   {
     path: 'calendar',
     component: CalendarComponent,
-    data: { title: 'Calendar' },
+    data: { title: 'Calendario' },
   },
   {
     path: 'invoice',
     component: InvoiceComponent,
-    data: { title: 'Invoice' },
+    data: { title: 'Factura' },
   },
 ]
